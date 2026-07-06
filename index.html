@@ -1,0 +1,600 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Anthony's Safe and Lock | Locksmith & Safe Specialists in Bristol, IN</title>
+<meta name="description" content="Anthony's Safe and Lock provides trusted residential & commercial locksmith services, plus specialized safe & vault sales and service in Bristol, Indiana and Elkhart County. Call now for a quote.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#132433;
+    --navy-2:#1c3a52;
+    --brass:#b9852f;
+    --brass-light:#d9a94a;
+    --cream:#f7f3ea;
+    --paper:#fffdf9;
+    --ink:#1a1a1a;
+    --muted:#5a6470;
+    --radius:14px;
+    --shadow:0 10px 30px rgba(19,36,51,0.12);
+    --max:1140px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    font-family:'Source Sans 3', sans-serif;
+    color:var(--ink);
+    background:var(--paper);
+    line-height:1.6;
+  }
+  h1,h2,h3,h4{
+    font-family:'Outfit', sans-serif;
+    color:var(--navy);
+    line-height:1.15;
+    margin:0 0 0.5em;
+  }
+  a{color:var(--brass);}
+  img{max-width:100%;display:block;}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 1.25rem;}
+  .visually-hidden{
+    position:absolute;width:1px;height:1px;padding:0;margin:-1px;
+    overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;
+  }
+
+  /* Skip link */
+  .skip-link{
+    position:absolute;left:-999px;top:auto;
+    background:var(--navy);color:#fff;padding:0.75rem 1rem;
+    z-index:200;border-radius:0 0 8px 0;
+  }
+  .skip-link:focus{left:0;top:0;}
+
+  /* Header */
+  header.site{
+    background:var(--navy);
+    color:#fff;
+    position:sticky;top:0;z-index:100;
+    box-shadow:0 2px 12px rgba(0,0,0,0.2);
+  }
+  .site-inner{
+    display:flex;align-items:center;justify-content:space-between;
+    padding:0.85rem 1.25rem;
+    max-width:var(--max);margin:0 auto;
+    gap:1rem;
+  }
+  .brand{
+    display:flex;align-items:center;gap:0.6rem;
+    text-decoration:none;color:#fff;
+  }
+  .brand svg{flex-shrink:0;}
+  .brand-text{display:flex;flex-direction:column;line-height:1.1;}
+  .brand-text strong{font-family:'Outfit',sans-serif;font-size:1.15rem;letter-spacing:0.3px;}
+  .brand-text span{font-size:0.72rem;color:var(--brass-light);letter-spacing:0.5px;text-transform:uppercase;}
+  .header-cta{
+    display:flex;align-items:center;gap:1rem;
+  }
+  .header-cta a.callnow{
+    background:var(--brass);
+    color:#1a1206;
+    font-weight:700;
+    padding:0.6rem 1rem;
+    border-radius:999px;
+    text-decoration:none;
+    font-size:0.92rem;
+    white-space:nowrap;
+    box-shadow:0 4px 12px rgba(185,133,47,0.35);
+  }
+  .header-cta a.callnow:hover{background:var(--brass-light);}
+  nav.primary{display:none;}
+  @media (min-width:760px){
+    nav.primary{display:flex;gap:1.4rem;margin-right:auto;margin-left:2rem;}
+    nav.primary a{color:#e9e9e9;text-decoration:none;font-size:0.95rem;font-weight:500;}
+    nav.primary a:hover{color:var(--brass-light);}
+  }
+
+  /* Hero */
+  .hero{
+    position:relative;
+    background:
+      linear-gradient(160deg, rgba(19,36,51,0.92), rgba(28,58,82,0.85)),
+      repeating-linear-gradient(45deg, #16293a 0 2px, #132433 2px 40px);
+    color:#fff;
+    padding:4.5rem 0 4rem;
+    overflow:hidden;
+  }
+  .hero-inner{
+    max-width:var(--max);margin:0 auto;padding:0 1.25rem;
+    display:grid;grid-template-columns:1fr;gap:2rem;align-items:center;
+  }
+  @media (min-width:860px){
+    .hero-inner{grid-template-columns:1.2fr 0.9fr;}
+  }
+  .badge-rating{
+    display:inline-flex;align-items:center;gap:0.5rem;
+    background:rgba(255,255,255,0.08);
+    border:1px solid rgba(255,255,255,0.18);
+    padding:0.4rem 0.85rem;
+    border-radius:999px;
+    font-size:0.85rem;
+    margin-bottom:1.1rem;
+  }
+  .badge-rating .stars{color:var(--brass-light);letter-spacing:1px;}
+  .hero h1{
+    color:#fff;
+    font-size:clamp(2rem, 5vw, 2.9rem);
+    margin-bottom:0.6rem;
+  }
+  .hero h1 em{
+    font-style:normal;color:var(--brass-light);
+  }
+  .hero p.lede{
+    font-size:1.15rem;
+    color:#d9dde2;
+    max-width:42ch;
+    margin-bottom:1.8rem;
+  }
+  .hero-ctas{display:flex;flex-wrap:wrap;gap:0.85rem;}
+  .btn{
+    display:inline-flex;align-items:center;gap:0.5rem;
+    padding:0.85rem 1.5rem;
+    border-radius:10px;
+    font-weight:600;
+    text-decoration:none;
+    font-size:1rem;
+    transition:transform 0.15s ease, box-shadow 0.15s ease;
+  }
+  .btn:hover{transform:translateY(-2px);}
+  .btn-primary{
+    background:var(--brass);
+    color:#1a1206;
+    box-shadow:0 6px 18px rgba(185,133,47,0.4);
+  }
+  .btn-primary:hover{background:var(--brass-light);}
+  .btn-ghost{
+    background:transparent;
+    color:#fff;
+    border:1.5px solid rgba(255,255,255,0.4);
+  }
+  .btn-ghost:hover{border-color:var(--brass-light);color:var(--brass-light);}
+
+  .hero-panel{
+    background:rgba(255,255,255,0.06);
+    border:1px solid rgba(255,255,255,0.16);
+    border-radius:var(--radius);
+    padding:1.6rem;
+    backdrop-filter:blur(4px);
+  }
+  .hero-panel h2{color:#fff;font-size:1.15rem;margin-bottom:1rem;}
+  .hero-panel ul{list-style:none;margin:0;padding:0;display:grid;gap:0.75rem;}
+  .hero-panel li{
+    display:flex;gap:0.65rem;align-items:flex-start;
+    color:#d9dde2;font-size:0.95rem;
+  }
+  .hero-panel li svg{flex-shrink:0;margin-top:0.15rem;color:var(--brass-light);}
+
+  /* Sections */
+  section{padding:4rem 0;}
+  .section-head{max-width:640px;margin:0 auto 2.5rem;text-align:center;}
+  .section-head h2{font-size:clamp(1.6rem,3.5vw,2.1rem);}
+  .eyebrow{
+    display:inline-block;
+    color:var(--brass);
+    text-transform:uppercase;
+    letter-spacing:1.5px;
+    font-size:0.78rem;
+    font-weight:700;
+    margin-bottom:0.6rem;
+  }
+  .section-head p{color:var(--muted);}
+
+  /* Services */
+  .services{background:var(--cream);}
+  .service-grid{
+    display:grid;gap:1.4rem;
+    grid-template-columns:1fr;
+  }
+  @media (min-width:640px){
+    .service-grid{grid-template-columns:repeat(2,1fr);}
+  }
+  @media (min-width:980px){
+    .service-grid{grid-template-columns:repeat(4,1fr);}
+  }
+  .service-card{
+    background:#fff;
+    border-radius:var(--radius);
+    padding:1.7rem 1.4rem;
+    box-shadow:var(--shadow);
+    border-top:4px solid var(--brass);
+  }
+  .service-card .icon{
+    width:48px;height:48px;
+    border-radius:50%;
+    background:var(--navy);
+    display:flex;align-items:center;justify-content:center;
+    margin-bottom:1rem;
+    color:var(--brass-light);
+  }
+  .service-card h3{font-size:1.1rem;margin-bottom:0.4rem;}
+  .service-card p{color:var(--muted);font-size:0.94rem;margin:0;}
+
+  .specialty-banner{
+    margin-top:2.5rem;
+    background:var(--navy);
+    color:#fff;
+    border-radius:var(--radius);
+    padding:1.8rem 2rem;
+    display:flex;flex-wrap:wrap;
+    gap:1.2rem;align-items:center;justify-content:space-between;
+  }
+  .specialty-banner .txt{max-width:560px;}
+  .specialty-banner h3{color:#fff;margin-bottom:0.3rem;}
+  .specialty-banner p{color:#c9d2da;margin:0;}
+  .specialty-banner .btn-primary{flex-shrink:0;}
+
+  /* About */
+  .about{background:var(--paper);}
+  .about-grid{
+    display:grid;gap:2.5rem;
+    grid-template-columns:1fr;
+    align-items:center;
+  }
+  @media (min-width:860px){
+    .about-grid{grid-template-columns:1fr 1fr;}
+  }
+  .about-art{
+    background:linear-gradient(135deg, var(--navy), var(--navy-2));
+    border-radius:var(--radius);
+    aspect-ratio:4/3;
+    display:flex;align-items:center;justify-content:center;
+    box-shadow:var(--shadow);
+  }
+  .about-copy h2{font-size:clamp(1.6rem,3.5vw,2.1rem);}
+  .about-copy p{color:var(--muted);margin-bottom:1rem;}
+  .stat-row{
+    display:flex;gap:2rem;flex-wrap:wrap;margin-top:1.5rem;
+  }
+  .stat{min-width:110px;}
+  .stat strong{
+    display:block;font-family:'Outfit',sans-serif;
+    font-size:1.8rem;color:var(--navy);
+  }
+  .stat span{font-size:0.85rem;color:var(--muted);}
+
+  /* Social proof */
+  .proof{background:var(--cream);}
+  .proof-top{
+    text-align:center;margin-bottom:2.5rem;
+  }
+  .proof-rating{
+    display:inline-flex;align-items:center;gap:0.7rem;
+    background:#fff;padding:0.9rem 1.4rem;border-radius:999px;
+    box-shadow:var(--shadow);
+  }
+  .proof-rating .stars{color:var(--brass);font-size:1.3rem;letter-spacing:2px;}
+  .proof-rating strong{font-family:'Outfit',sans-serif;font-size:1.2rem;color:var(--navy);}
+  .proof-rating span{color:var(--muted);font-size:0.9rem;}
+  .review-note{
+    max-width:560px;margin:1.2rem auto 0;
+    color:var(--muted);font-size:0.95rem;text-align:center;
+  }
+
+  /* Contact */
+  .contact{background:var(--navy);color:#fff;}
+  .contact .section-head p{color:#c9d2da;}
+  .contact-grid{
+    display:grid;gap:2rem;
+    grid-template-columns:1fr;
+  }
+  @media (min-width:860px){
+    .contact-grid{grid-template-columns:1fr 1fr;}
+  }
+  .contact-card{
+    background:rgba(255,255,255,0.06);
+    border:1px solid rgba(255,255,255,0.16);
+    border-radius:var(--radius);
+    padding:2rem;
+  }
+  .contact-card h3{color:#fff;font-size:1.2rem;margin-bottom:1.2rem;}
+  .contact-list{list-style:none;margin:0;padding:0;display:grid;gap:1.1rem;}
+  .contact-list li{display:flex;gap:0.85rem;align-items:flex-start;}
+  .contact-list svg{flex-shrink:0;color:var(--brass-light);margin-top:0.2rem;}
+  .contact-list a{color:#fff;text-decoration:none;font-weight:600;}
+  .contact-list a:hover{color:var(--brass-light);}
+  .contact-list p{margin:0;color:#c9d2da;font-size:0.95rem;}
+  .map-embed{
+    border-radius:var(--radius);
+    overflow:hidden;border:1px solid rgba(255,255,255,0.16);
+    min-height:260px;
+  }
+  .map-embed iframe{width:100%;height:100%;min-height:260px;border:0;display:block;}
+
+  .cta-final{
+    margin-top:2.5rem;
+    text-align:center;
+    background:rgba(185,133,47,0.12);
+    border:1px solid rgba(185,133,47,0.4);
+    border-radius:var(--radius);
+    padding:2rem;
+  }
+  .cta-final h3{color:#fff;font-size:1.4rem;}
+  .cta-final p{color:#e2c98a;margin-bottom:1.3rem;}
+
+  /* Footer */
+  footer.site-footer{
+    background:#0e1b26;color:#a8b3bd;
+    padding:2.5rem 0 1.5rem;
+    font-size:0.9rem;
+  }
+  .footer-inner{
+    display:flex;flex-wrap:wrap;justify-content:space-between;gap:1.5rem;
+    margin-bottom:1.5rem;
+  }
+  .footer-inner h4{color:#fff;font-size:1.05rem;margin-bottom:0.6rem;}
+  .footer-links{list-style:none;margin:0;padding:0;}
+  .footer-links li{margin-bottom:0.4rem;}
+  .footer-links a{color:#a8b3bd;text-decoration:none;}
+  .footer-links a:hover{color:var(--brass-light);}
+  .footer-bottom{
+    border-top:1px solid rgba(255,255,255,0.1);
+    padding-top:1.2rem;
+    text-align:center;
+    font-size:0.82rem;
+  }
+  .footer-bottom .wildcard{
+    display:block;margin-top:0.4rem;color:#6f7b85;
+  }
+  .footer-bottom .wildcard a{color:#8a97a3;}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<header class="site">
+  <div class="site-inner">
+    <a class="brand" href="#top">
+      <svg width="38" height="38" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+        <circle cx="24" cy="24" r="23" stroke="#b9852f" stroke-width="2"/>
+        <path d="M24 12a7 7 0 0 0-7 7v3h-2v14h18V22h-2v-3a7 7 0 0 0-7-7zm0 3a4 4 0 0 1 4 4v3h-8v-3a4 4 0 0 1 4-4z" fill="#d9a94a"/>
+      </svg>
+      <span class="brand-text">
+        <strong>Anthony's Safe &amp; Lock</strong>
+        <span>Bristol, Indiana</span>
+      </span>
+    </a>
+    <nav class="primary" aria-label="Primary">
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="header-cta">
+      <a class="callnow" href="tel:+15748487484">Call (574) 848-7484</a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="hero" id="top">
+    <div class="hero-inner">
+      <div>
+        <span class="badge-rating">
+          <span class="stars" aria-hidden="true">★★★★★</span>
+          4.7 rating &middot; 14 local reviews
+        </span>
+        <h1>Locksmith &amp; Safe Experts <em>Bristol, Indiana</em> Trusts</h1>
+        <p class="lede">Residential and commercial locksmith work, plus specialized safe &amp; vault sales and service &mdash; a niche most locksmiths don't offer. Locally based and community-rooted.</p>
+        <div class="hero-ctas">
+          <a class="btn btn-primary" href="tel:+15748487484">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.9 21 3 13.1 3 3c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.4 0 .8-.2 1L6.6 10.8z"/></svg>
+            Call Now for a Quote
+          </a>
+          <a class="btn btn-ghost" href="#services">View Services</a>
+        </div>
+      </div>
+      <div class="hero-panel">
+        <h2>Why Bristol &amp; Elkhart County Call Anthony's</h2>
+        <ul>
+          <li>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2 3 5v6c0 5.5 3.8 10.7 9 12 5.2-1.3 9-6.5 9-12V5l-9-3zm0 2.2 7 2.3v4.5c0 4.5-3 8.8-7 9.9-4-1.1-7-5.4-7-9.9V6.5l7-2.3z"/></svg>
+            <span>Rare specialty in safes &amp; vaults &mdash; sales and service</span>
+          </li>
+          <li>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 21V9l8-6 8 6v12h-6v-7h-4v7H4z"/></svg>
+            <span>Residential &amp; commercial locksmith coverage</span>
+          </li>
+          <li>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10zm0 2c-4 0-8 2-8 5v3h16v-3c0-3-4-5-8-5z"/></svg>
+            <span>Locally based, community-rooted business</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="services" id="services">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">What We Do</span>
+        <h2>Locksmith &amp; Safe Services for Home and Business</h2>
+        <p>From a sticky front-door deadbolt to a commercial vault install, Anthony's Safe and Lock handles it with care and expertise.</p>
+      </div>
+      <div class="service-grid">
+        <div class="service-card">
+          <div class="icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M4 21V9l8-6 8 6v12h-6v-7h-4v7H4z"/></svg>
+          </div>
+          <h3>Residential Locksmith</h3>
+          <p>Lockouts, rekeys, deadbolt upgrades, and full home lock hardware for homeowners across Bristol and Elkhart County.</p>
+        </div>
+        <div class="service-card">
+          <div class="icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M3 21V8l9-5 9 5v13h-6v-6H9v6H3z"/></svg>
+          </div>
+          <h3>Commercial Locksmith</h3>
+          <p>Master key systems, access control, and hardware repair to keep your business secure and operating smoothly.</p>
+        </div>
+        <div class="service-card">
+          <div class="icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M6 2h12v20H6V2zm3 4v3h6V6H9zm0 6v3h6v-3H9z"/></svg>
+          </div>
+          <h3>Safe &amp; Vault Sales</h3>
+          <p>Expert guidance on selecting the right safe or vault for your home, cash office, or business &mdash; a true specialty.</p>
+        </div>
+        <div class="service-card">
+          <div class="icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a5 5 0 0 0-5 5v3H5v12h14V10h-2V7a5 5 0 0 0-5-5zm0 2a3 3 0 0 1 3 3v3H9V7a3 3 0 0 1 3-3z"/></svg>
+          </div>
+          <h3>Lock Installation &amp; Repair</h3>
+          <p>Precise installation and repair of residential and commercial locks, matched to your security needs and budget.</p>
+        </div>
+      </div>
+
+      <div class="specialty-banner">
+        <div class="txt">
+          <h3>Safes &amp; Vaults: Our Specialty</h3>
+          <p>Most locksmiths don't touch safes and vaults &mdash; Anthony's does, offering sales and service that few in the area can match.</p>
+        </div>
+        <a class="btn btn-primary" href="tel:+15748487484">Ask About Safes &amp; Vaults</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <div class="wrap about-grid">
+      <div class="about-art" role="img" aria-label="Anthony's Safe and Lock service van and safe illustration">
+        <svg width="120" height="120" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <circle cx="12" cy="12" r="11" stroke="#d9a94a" stroke-width="1.4"/>
+          <rect x="7" y="6" width="10" height="12" rx="1.2" stroke="#d9a94a" stroke-width="1.4"/>
+          <circle cx="12" cy="12" r="1.6" fill="#d9a94a"/>
+        </svg>
+      </div>
+      <div class="about-copy">
+        <span class="eyebrow">About Anthony's</span>
+        <h2>Locally Trusted, Genuinely Specialized</h2>
+        <p>Anthony's Safe and Lock is a locally trusted locksmith and safe/vault specialist serving homeowners and business owners throughout Bristol, Indiana and the surrounding Elkhart County communities.</p>
+        <p>Beyond everyday lock and key work, Anthony's brings a level of safe and vault expertise that's rare among local locksmiths &mdash; making us the call for anything from a jammed office lock to a full vault installation.</p>
+        <div class="stat-row">
+          <div class="stat">
+            <strong>4.7★</strong>
+            <span>Average rating</span>
+          </div>
+          <div class="stat">
+            <strong>14</strong>
+            <span>Local reviews</span>
+          </div>
+          <div class="stat">
+            <strong>2</strong>
+            <span>Client types served: home &amp; business</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="proof" id="reviews">
+    <div class="wrap">
+      <div class="proof-top">
+        <span class="eyebrow">Community Reputation</span>
+        <h2>Rated 4.7 Stars by Local Customers</h2>
+        <div class="proof-rating">
+          <span class="stars" aria-hidden="true">★★★★★</span>
+          <strong>4.7</strong>
+          <span>from 14 reviews</span>
+        </div>
+        <p class="review-note">Anthony's Safe and Lock has built its reputation the old-fashioned way: reliable work and fair treatment for homeowners and businesses across the Bristol area.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Get In Touch</span>
+        <h2>Call Now for a Locksmith Quote or Service Appointment</h2>
+        <p>Locked out, upgrading your business's security, or shopping for a safe? Reach out to Anthony's Safe and Lock today.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-card">
+          <h3>Contact Details</h3>
+          <ul class="contact-list">
+            <li>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.9 21 3 13.1 3 3c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.4 0 .8-.2 1L6.6 10.8z"/></svg>
+              <div>
+                <a href="tel:+15748487484">(574) 848-7484</a>
+                <p>Call for a quote or to schedule service</p>
+              </div>
+            </li>
+            <li>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C7 2 3 6 3 11c0 7 9 11 9 11s9-4 9-11c0-5-4-9-9-9zm0 12a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/></svg>
+              <div>
+                <a href="https://www.google.com/maps/search/?api=1&query=3485+Fox+Chase+Dr%2C+Bristol%2C+IN+46507" target="_blank" rel="noopener">3485 Fox Chase Dr, Bristol, IN 46507</a>
+                <p>Serving Bristol and surrounding Elkhart County</p>
+              </div>
+            </li>
+            <li>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 1a11 11 0 1 0 0 22 11 11 0 0 0 0-22zm.75 5v6.4l5 2.9-.75 1.3-5.75-3.4V6h1.5z"/></svg>
+              <div>
+                <a href="https://anthonyssafeandlockllc.com" target="_blank" rel="noopener">anthonyssafeandlockllc.com</a>
+                <p>Learn more or request a callback online</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="map-embed">
+          <iframe
+            title="Map to Anthony's Safe and Lock, 3485 Fox Chase Dr, Bristol, IN 46507"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps?q=3485+Fox+Chase+Dr,+Bristol,+IN+46507&output=embed">
+          </iframe>
+        </div>
+      </div>
+
+      <div class="cta-final">
+        <h3>Need a Locksmith or Safe Specialist Today?</h3>
+        <p>Call Anthony's Safe and Lock now &mdash; residential, commercial, and safe/vault service in one call.</p>
+        <a class="btn btn-primary" href="tel:+15748487484">Call (574) 848-7484</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-inner">
+      <div>
+        <h4>Anthony's Safe &amp; Lock</h4>
+        <p style="max-width:32ch;">Locksmith and safe/vault specialists serving Bristol, Indiana and surrounding Elkhart County communities.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="#services">Services</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul class="footer-links">
+          <li><a href="tel:+15748487484">(574) 848-7484</a></li>
+          <li>3485 Fox Chase Dr, Bristol, IN 46507</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Anthony's Safe and Lock, Bristol, IN. All rights reserved.</p>
+      <span class="wildcard">Website sample by <a href="#" rel="nofollow">Wild Card Creative Co</a></span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
